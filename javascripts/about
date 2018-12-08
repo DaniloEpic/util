@@ -1,0 +1,268 @@
+2018-10-13
+	"user_interface.js" - melhorias em UIContainer
+
+2018-10-09
+	"user_interface.js" - definida função focus_on para o tipo Validator
+
+2018-09-30
+	"user_interface.js" - definido o método init_tabela para o tipo UserInterface
+
+2018-07-28
+	"user_interface.js" - definido o tipo UIContainer
+
+2018-06-22
+	"cookies.js"	- correção no método getCookie()
+	"user_interface.js"	- definido o tipo Resource
+						- tipo Contexto foi modificado
+
+2018-06-11
+	"user_interface.js" - criada a função output para objetos da classe UserInterface
+
+2018-05-23
+	melhorias em "easyajax.js"
+
+2018-05-17
+	definido o tipo AjaxRequest em "easyajax.js"
+
+2018-03-09
+	melhorias em "user_interface.js"
+
+2018-03-03
+	melhorias em "user_interface.js"
+
+2018-02-08
+	criadas as funções Menu e Selecao em "user_interface.js"
+
+2017-12-23
+	atualizado "paginador.js"
+	... "easyajax.js"
+	criado o arquivo "user_interface.js"
+
+2017-10-19
+	melhorias em "paginador.js"
+
+2017-07-09
+	mais correções
+
+2017-06-29
+	o tipo Resposta em "easyajax.js" foi melhorado
+
+2017-05-15
+	criado o objeto camada em "menu.js"
+
+2017-05-01
+	"tabela.js" foi melhorado
+
+2017-02-10
+	criado o arquivo "strings.js"
+	removido o arquivo "my_string.js"
+
+2016-12-03
+	definido o tipo Slider em "paginador.js"
+
+2016-11-24
+	definido o tipo TagLista em "easydom.js"
+
+2016-11-10
+	definido o tipo FormRequest em "easyajax.js"
+
+2016-11-05
+	diversas melhorias em "paginador.js"
+
+2016-11-01
+	definidos os métodos 'numeroDePaginas', 'goTo' e 'all' em "paginador.js"
+
+2016-10-28
+	definidos os métodos 'first' e 'last' em "paginador.js"
+
+2016-08-02
+	criado o arquivo "menu.js"
+
+2016-06-09
+	"tabela.js" foi melhorado 
+
+2016-05-20
+	melhorias em "easydom.js"
+	
+2016-05-19
+	definida a função substituir em "my_string.js"
+
+2016-05-07
+	tipo SourceContainer definido em "easyajax.js" foi aperfeiçoado
+
+2016-05-05
+	melhorias em "easyajax.js"
+
+2016-02-29
+	definida a função get_widget_paginador em "paginador.js"
+
+2016-02-27
+	definido o método getParent para o tipo Container em "easydom.js"
+	definido o método tableElement para o tipo FakeTable em "tabela.js"
+
+2016-02-03
+	definido método switcher para o tipo Container em "easydom.js"
+
+2016-01-21
+	definida a função validar_cpf em "formulario.js"
+
+2016-01-21
+	novas funções para o tipo Container em "easydom.js"
+
+2016-01-12
+	melhorias em "easydom.js"
+
+2016-01-02
+	valueOf em "easydom.js"
+	tipo MyForm em "formvalidator.js" foi melhorado
+	"formulario.js" substitui "formvalidator.js"
+
+2015-12-24
+	definida a função show() em "tabela.js"
+
+2015-12-14
+	definido o tipo Frame em "easydom.js"
+
+2015-12-05
+	método go() em "paginador.js" foi modificado
+	definido o método setWidget() em "paginador.js" 
+
+2015-12-04
+	método go() substitui settings() em "paginador.js"
+
+2015-11-28
+	"paginas.js" foi removido
+	"paginador.js" melhorado
+	melhorias em "lista.js"
+	definido o tipo SpanButton em "easydom.js"
+
+2015-11-20
+	"paginas.js" foi melhorado
+
+2015-10-24
+	definido o tipo ActionButton em "easydom.js"
+
+2015-10-18
+	melhorias em "paginas.js"
+
+2015-10-17
+	melhorias em "tabela.js"
+
+2015-10-03
+	melhorias em "paginas.js"
+
+2015-09-26
+	definido o método link da classe Container em "easydom.js"
+
+2015-09-07
+	"melhorias na classe CookieCollection em 'cookies.js'"
+
+2015-09-01
+	"cookies.js" -- definido o método excluir do tipo "CookieCollection"
+
+2015-08-20
+	melhorias em "paginas.js"
+
+2015-08-01
+	criado a classe "FakeTable" em tabela.js
+
+2015-07-26
+	correções em "paginas.js"
+	criada a classe ListaHelper em "lista.js"
+
+2015-07-21
+	correções em "easydom.js" e "paginas.js"
+
+2015-07-14
+	criado o arquivo "paginas.js"
+
+2015-06-05
+	correções em "cookies.js"
+
+2015-05-30
+	correções em "cookies.js"
+
+2015-05-29
+	criado o arquivo cookies.js
+
+Revisado em 14 de Maio de 2015
+	criada a classe SequentialLinkedList em "lista.js"
+
+Revisado em 28 de Março de 2015
+	criado o arquivo "paginador.js"
+
+Revisado em 28 de Fevereiro de 2015
+	melhorias em "easydom.js"
+
+Revisado em 11 de Fevereiro de 2015
+	correções em "easydom.js"
+
+Revisado em 04 de Fevereiro de 2015
+	definida a classe Container em "easydom.js"
+
+Revisado em 22 de Janeiro de 2015
+	funções para remover espaços em branco em "my_string.js"
+
+Revisado em 01 de Janeiro de 2015
+	definida a classe Switcher em easydom.js
+
+Revisado em 17 de Dezembro de 2014
+	alterações em "easydom.js"
+
+Revisado em 24 de Novembro de 2014
+	alterações em "formvalidator.js"
+
+Revisado em 11 de Novembro de 2014
+	alterações em "formvalidator.js"
+
+Revisado em 04 de Novembro de 2014
+	alteração no arquivo "easydom.js"
+
+Revisado em 1º de Novembro de 2014
+	definida a função frm_to_json em "formvalidator.js"
+
+Revisado em 26 de Outubro de 2014
+	defina da classe "Chain" em "easydom.js"
+	definida a função check_email() em "formvalidator.js"
+	definida a função init_container() em "easydom.js"
+
+Revisado em 18 de Outubro de 2014
+	definido o método getContent() em "easyajax.js"
+
+Revisado em 08 de Outubro de 2014
+	definida a classe DeleteRequest em "easyajax.js"
+
+Revisado em 03 de Outubro de 2014
+	definida a classe PutRequest em "easyajax.js"
+
+Revisado em 01 de Outubro de 2014
+	função get_not_null em "formvalidator.js"
+
+Revisado em 30 de Setembro de 2014
+	novas funções em "easydom.js"
+
+Revisado em 25 de Setembro de 2014
+	criado o arquivo "tabs.js"
+
+Revisado em 23 de Setembro de 2014
+	easydom.js - definidos os métodos get_element e append_element
+
+Revisado em 10 de Julho de 2014
+	formvalidator.js - função campos requeridos
+
+Revisado em 14 de Março de 2014
+	formvalidator.js - definida a classe myForm
+
+Revisado em 30 de Janeiro de 2014
+	easydom.js - definida a classe Documento
+
+Revisado em 16-01-2014
+	Criado o arquivo lista.js
+
+Revisado em 26-12-2013
+	my_string.js - método starts-with
+
+Revisado em 21-12-2013
+	evento.js - definida classe Evento
+
+Revisado em 16-11-2013
