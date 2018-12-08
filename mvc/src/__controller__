@@ -1,0 +1,75 @@
+<?php
+require_once PROJECT_ADDRESS."/lib/DefaultController.php";
+require PROJECT_ADDRESS."/app/models/@model.php";
+
+abstract class @modelController extends DefaultController {
+public static $model;
+
+ public static function init() {
+ parent::init();
+ self::$model = new @model();
+ }
+ 
+ public static function defaultModel($m = null) {
+  if ($m != null) {
+  self::$model = $m;
+  }
+  else {
+  return $m;
+  }
+ }
+ 
+ public static function set($x,$y) {
+ $rc = self::$model->getClasse();
+ $n = "set".ucfirst(strtolower($x));
+ $rm = $rc->getMethod($n);
+ $rm->invoke(self::$model,$y);
+ }
+ 
+ public static function get($x) { $m = self::$model->get_method($x); return $m->invoke(self::$model); }
+ 
+ public static function from_array($v,$o = false) {
+ $dm = self::defaultModel();
+  if ($o) {
+  $p = $dm->getClasse()->newInstance();
+  }
+ $b = explode(",",$dm->getFields());
+  for ($i = 0; $i < count($b); $i++) {
+  $rm = $dm->getClasse()->getMethod("set".ucfirst(strtolower($b[$i])));
+  $n = $v["".$b[$i].""];
+   if ($p) {
+   $rm->invoke($p,$n);
+   }
+   else {
+   $rm->invoke($dm,$n);
+   }
+  }
+ return $p;
+ }
+ 
+ public static function get@model($i) {
+ $o = self::$model->registro($i);
+  if ($o) {
+  $row = self::$model->getConnection()->get_row($o);
+   if ($row) {
+   self::from_array($row);
+   }
+  }
+ }
+ 
+ public static function get_@name($i) {
+ $o = self::$model->registro($i);
+  if ($o) {
+  $row = self::$model->getConnection()->get_row($o);
+   if ($row) {
+   $o = self::from_array($row,true);
+   }
+  }
+ return $o;
+ }
+ 
+ public static function fields() {
+ return self::$model->getFields();
+ }
+}
+?>

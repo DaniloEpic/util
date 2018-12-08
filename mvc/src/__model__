@@ -1,0 +1,75 @@
+<?php
+require_once PROJECT_ADDRESS."/lib/DefaultModel.php";
+require_once PROJECT_ADDRESS."/lib/Model.php";
+require_once PROJECT_ADDRESS."/app/persistence.php";
+
+class @name extends DefaultModel implements Model {
+@attributes
+ public function @name() {
+ parent::init();
+ $this->setConnection(set_db_connection());
+ }
+ 
+ public static function fromArray($v,$attrs = null) {
+ $c = new ReflectionClass(__CLASS__);
+ $o = $c->newInstance();
+  if ($attrs == null) {
+  $attrs = $o->attrs();
+  }
+ $a = explode(",",$attrs);
+  for ($i = 0;$i < count($a); $i++) {
+  $m = $c->getMethod("set".ucfirst(strtolower($a[$i])));
+  $p = $v["".$a[$i].""];
+  $m->invoke($o,$p);
+  }
+ return $o;
+ }
+ 
+ public static function fromJSON($j,$attrs) {
+ $v = json_decode($j,true);
+ $o = @name::fromArray($v,$attrs);
+ return $o;
+ }
+@accessor_methods
+ public function persistir() {
+ $q = "";
+ $query = "insert into ".$this->getTable()." (".$q.")".
+          " values ()";
+ return $this->getConnection()->executeDML($query);
+ }
+
+ public function registro($i) {
+ $q = "";
+ $query = "select ".$q." from ".$this->getTable().
+		  " where id = ".$this->escape_param($i);
+ $this->setField($q);
+ return $this->getConnection()->executeDML($query);
+ }
+
+ public function registros() {
+ $q = "";
+ $query = "select ".$q." from ".$this->getTable();
+ return $this->getConnection()->executeDML($query);
+ }
+ 
+ public function delete() {
+ $query = "delete from ".$this->getTable().
+          " where id = ".$this->escape("id");
+ return $this->getConnection()->executeDML($query);
+ }
+
+ public function xml() {
+ return "";
+ }
+ 
+ public function json() {
+ $s = "{}";
+ return $s;
+ }
+ 
+ public function attrs() {
+ return @attrs;
+ }
+
+}
+?>

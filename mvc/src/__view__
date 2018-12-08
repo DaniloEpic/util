@@ -1,0 +1,7 @@
+<?php
+abstract class @controllerView {
+ public static function init() {
+ getController("@controller");
+ }
+}
+?>
