@@ -1,0 +1,23 @@
+Revisado em 2017-02-04
+	correções...
+
+Revisado em 04/02/2015
+	novas funções incluídas em "project.php"
+
+Revisado em 23/12/2015
+	correções em "project.php"
+
+Revisado em 20/11/2015
+	novas funções em "project.php"
+
+Revisado em 08/11/2015
+	novas funções em "project.php"
+
+Revisado em 02 de Novembro de 2015
+	"project.php" foi modificado
+
+Revisado em 12 de Março de 2015
+	a função set_db_connection() em "persistence.php" foi alterada
+
+Revisado em 26 de Janeiro de 2014
+	definida a função set_formato_data em "persistence.php"
