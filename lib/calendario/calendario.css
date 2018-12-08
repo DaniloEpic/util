@@ -1,0 +1,45 @@
+#calendario {
+position: relative;
+font-family: monospace;
+}
+
+#calendario > table {
+position: absolute;
+z-index: 2;
+top: 3px;
+border-collapse: collapse;
+background-color: white;
+color: black;
+}
+
+#calendario th, #calendario td {
+border-style: solid;
+border-width: 1px;
+border-color: silver;
+text-align: center;
+cursor: default;
+}
+
+#calendario td {
+background-color: inherit;
+}
+
+#calendario td.mesatual {
+background-color: beige;
+}
+
+#calendario th > span,
+#calendario td > span {
+display: inline-block;
+padding: 2px;
+}
+
+#calendario td > span.hoje {
+background-color: seagreen;
+color: white;
+font-weight: bold;
+}
+
+#calendario td > span.selecionada {
+font-weight: bold;
+}

@@ -1,0 +1,362 @@
+2018-Dez-03
+	/calendario/calendario.php foi corrigido
+
+2018-Out-21
+	/util/json.php --> definido o método loop_bool() para JSON_Array()
+
+2018-Out-13
+	/util/string.php --> novas funções: string_valida() e caracteres_validos()
+
+2018-Set-30
+	/util/json.php --> funções json_transposta e json_value foram melhoradas
+
+2018-Set-28
+	definida a função download() em /classes/Arquivo.php
+
+2018-Set-25
+	correções em /classes/ODBCPersistence.php
+
+2018-Set-21
+	/classes/ODBCPersistence.php
+
+2018-Set-17
+	/util/json.php: correções em JSON_Array
+
+2018-Set-12
+	/util/json.php:	correções na função escape_to_json()
+
+2018-Set-09
+	/util/json.php:	criada a função escape_to_json()
+	DefaultModel.php:	o método json_atribute foi modificado
+
+2018-Jul-29
+	definido o método isEmpty em "/classes/Lista.php"
+
+2018-Maio-06
+	criados as funções data_json_array e loop em /util/Set.php
+
+2018-Mai-04
+	melhorias em /util/Set.php
+
+2018-Mai-01
+	criada a classe /util/Set.php
+
+2018-Jan-31
+	melhorias em /classes/MySQLPersistence.php
+	
+2018-Jan-21
+	correções em /util/proteger.php
+
+2017-Dez-23
+	...
+
+2017-Ago-13
+	alterações em /classes/Pasta.php e /classes/Diretorio.php 
+
+2017-Jul-09
+	correções em /util/LimitHelper.php
+	correções em /classes/MySQLPersistence.php
+
+2017-Abr-22
+	melhorias em /util/json.php
+
+2017-Abr-08
+	correções em /util/json.php
+
+2017-Fev-04
+	correções...
+
+2017-Fev-01
+	definido o método json_attribute em "DefaultModel.php"
+
+2017-Jan-08
+	refactor da classe "/classes/Diretorio.php"
+
+2016-Dez-19
+	correções em /util/json.php
+
+2016-Dez-04
+	definido o método 'e_valida' em "/classes/Data.php"
+
+Revisado em 03/12/2016
+	criados os métodos 'setFields' e 'getFields' em "DefaultModel.php" 
+
+Revisado em 13/11/2016
+	definido o método 'compactar' em "Arquivo.php"
+	correções em "Diretorio.php"
+	método 'get' em "Register.php" foi corrigido
+	definido o método 'getArquivo' em "UploadedFile.php"
+
+Revisado em 30/10/2016
+	melhorias em "/classes/MySQLPersistence.php"
+
+Revisado em 28/10/2016
+	definido o método 'ultimaPagina' em "/util/LimitHelper.php"
+	melhorias em "/classes/MySQLPersistence.php"
+
+Revisado em 24/09/2016
+	definida a função lista_to_json em "/util/json.php"
+
+Revisadeo em 19/07/2016
+	corrigido bug em "/util/json.php"
+
+Revisado em 12/06/2016
+	melhorias em "/classes/Data.php"
+
+Revisado em 09/04/2016
+	melhorias em DefaultModel.php e "/util/json.php"
+
+Revisado em 10/02/2016
+	definido o método getData da classe "JSON_Array" em "util/json.php"
+
+Revisado em 08/02/2016
+	a classe abstrata DefaultModel foi melhorada
+
+Revisado em 02/02/2016
+	novas classes "JSON_Attribute" e "JSON_Array" em "util/json.php"
+
+Revisado em 26/01/2016
+	definido o método escape_param em "DefaultModel.php"
+
+Revisado em 04/01/2016
+	"proteger.php" foi melhorado
+
+Revisado em 23/12/2015
+	definida a função print_exception() em "DefaultController.php"
+
+Revisado em 08/12/2015
+	definida função json_value em "/util/json.php"
+	"DefaultModel.php" agora requer "/util/json.php"
+
+Revisado em 29 de Novembro de 2015
+	definido o método json() em "/util/LimitHelper.php"
+
+Revisado em 28 de Novembro de 2015
+	all clear
+
+Revisado em 24 de Novembro de 2015
+	definido o método get_lista em "DefaultModel.php"
+	definido o método with_limits em "MySQLPersistence.php" 
+
+Revisado em 02 de Novembro de 2015
+	criada a classe "util/JWT.php"
+
+Revisado em 19 de Outubro de 2015
+	refactory do projeto "calendario"
+
+Revisado em 15 de Outubro de 2015
+	deninido o método query() em "/util/LimitHelper.php"
+	definidos os métodos set_limit() e get_limit() em "MySQLPersistence.php"
+
+Revisado em 26 de Setembro de 2015
+	definida a função "loop_data()" em "/util/json.php" 
+
+Revisado em 13 de Setembro de 2015
+	readequação das classes -- "Lista.php" agora requer "Attribute.php", etc.
+
+Revisado em 13 de Setembro de 2015
+	"Register.php" agora requer "Attribute.php"
+
+Revisado em 20 de Agosto de 2015
+	"email.php" foi excluído
+	criada a função get_data em "json.php"
+
+Revisado em 08 de Agosto de 2015
+	criada a classe "UploadedFile"
+
+Revisado em 26 de Julho de 2015
+	alterações em "LimitHelper.php"
+
+Revisado em 21 de Julho de 2015
+	removido o método json_pages de "Lista.php"
+	criadas a classes Limit e LimitHelper em "LimitHelper.php"
+
+Revisado em 28 de Junho de 2015
+	definido o método "json_pages()" em "Lista.php"
+
+Revisado em 27 de Junho de 2015
+	definido o tipo "Slider" em "Paginador.php"
+	definido o método "slider" em "ListaHelper.php"
+
+Revisado em 27 de Abril de 2015
+
+Revisado em 12 de Março de 2015
+	correções em MySQLPersistence
+
+Revisado em 05 de Março de 2015
+	melhorias em "json.php"
+
+Revisado em 10 de Fevereiro de 2015
+	definada a função atualizar em "DefaultModel.php"
+
+Revisado em 03 de Fevereiro de 2015
+	função json_transposta em "json.php" foi modificada
+
+Revisado em 02 de Fevereiro de 2015
+	MySQLPersistence agora utiliza a classe mysqli
+
+Revisado em 14 de Janeiro de 2015
+	método toArray foi substituído por get_array em "Lista.php"
+	definida a função json_transposta em "json.php"
+
+Revisado em 10 de Janeiro de 2015
+	função dateFormat em "MySQLPersistence.php" foi modificada
+
+Revisado em 07 de Janeiro de 2015
+	o método fromString da classe Data foi melhorado
+
+Revisado em 31 de Dezembro de 2014
+	correção no projeto calendario
+
+Revisado em 26 de Dezembro de 2014
+	definida a função json_concat() em "MySQLPersistence.php"
+
+Revisado em 24 de Dezembro de 2014
+	interface Paginável foi movida para "Paginador.php"
+	DefaultModel foi atualizado
+
+Revisado em 14 de Dezembro de 2014
+	método toJSON na classe "Persistence.php" foi modificado
+	a função MySQLPersistence foi modificada
+
+Revisado em 08 de Novembro de 2014
+	modificações em "DefaultModel.php"
+
+Revisado em 1º de Novembro de 2014
+	o arquivo DBPersistence.php foi removido
+	criado o arquivo Persistence.php
+	alterações em MySQLPersistence, ODBCPersistence, PGPersistence
+
+Revisado em 18 de Outubro de 2014
+	definido o método getJson() em "DefaultModel.php"
+
+Revisado em 11 de Outubro de 2014
+	classe DefaultController foi atualizada
+
+Revisado em 09 de Outubro de 2014
+	criada a classe RestRequest
+	criada a classe RestResource
+
+Revisado em 17 de Setembro de 2014
+	definida a função __GET em "DefaultController.php"
+
+Revisado em 16 de Setembro de 2014
+	definido o método toJSON() em "MySQLPersistence.php"
+	definido o método json() em "Lista.php"
+
+Revisado em 07 de Setembro de 2014
+	criado o arquivo "util/json.php"
+	"Model.php" foi atualizado
+
+Revisado em 24 de Agosto de 2014
+	estudo do uso da extensão mysqli em MySQLPersistence
+
+Revisado em 16 de Agosto de 2014
+	definido o método to_xsl() na classe XMLNode.php
+
+Revisado em 19 de Julho de 2014
+	definido o método delete() em Model.php
+	criada a classe Register.php
+	método setConteudoFromString() da classe Documento.php foi modificado
+
+Revisado em 05 de Julho de 2014
+	correção do método get da classe SequencialLinkedList
+	correção do método remove da classe SequencialLinkedList
+	alteração na classe DefaultModel
+	criado o arquivo string.php
+
+Revisado em 01 de Abril de 2014
+	classe Handler foi atualizada
+
+Revisado em 22 de Fevereiro de 2014
+	métodos set e get removidos de DefaultController
+
+Revisado em 21 de Fevereiro de 2014
+	definido o método set em DefaultController
+	definido o método get em DefaultController
+
+Revisado em 02 de Fevereiro de 2014
+	o arquivo cal.js do projeto "calendario" foi modificado
+
+Revisado em 26 de Janeiro de 2014
+	definida a função dateFormat() em "MySQLPersistence.php"
+
+Revisado em 19/01/2014
+	definido o método 'session' na classe DefaultModel
+
+Revisado em 31/12/2013
+	definido o método 'escape' na classe DefaultModel
+
+Revisado em 17/11/2013
+	criado o método num_rows em XMLFromMySQL.php
+
+Revisado em 24/10/2013
+	classe URLAttribute movida para Attribute.php
+	método diferencadias da classe Data foi modificado
+	a interface XMLString foi removida
+	classes XMLFromMySQL e XMLFromODBC foram atualizadas
+	criado o arquivo lib/util/timesavers.php
+
+Revisado em 05/10/2013
+	definido o método get_row() na classe MySQLPersistence
+
+
+Revisado em 29/09/2013
+	removido o método get_xml_paginado da classe XMLFromMySQL
+	alterado o método get_xml da classe XMLFromMySQL
+	interface XMLString foi alterada
+
+Revisado em 21/09/2013
+
+Revisado em 20/09/2013
+	definidos os métodos setValue e appendValue na classe XMLNode
+	criado função to_form
+
+Revisado em 07/09/2013
+	ajustes nos métodos comeco e fim da classe Paginador
+
+Revisado em 25/08/2013
+	removido bug da classe Paginador
+
+Revisado em 22/08/2013
+	classe Paginador simplificada
+
+Revisado em 21/08/2013
+	removido o método ir_para_pagina da interface Paginavel.php
+	método to_s modificado em Paginador.php
+	definidos os métodos from() e to() em Lista.php
+	métodos to_string() e to_s() modificados em Lista.php
+	método getJ() removido da classe Lista.php
+	classe ListaHelper atualizada
+
+Revisado em 04/08/2013
+	criado o arquivo colecao.js
+
+Revisado em 17/07/2013
+	classe PGPersistence melhorada
+
+Revisado em 12/07/2013
+	criada a classe PGPersistence
+
+Revisado em 04/07/2013
+	método loop_when incluído na classe ListaHelper
+
+Revisado em 16/06/2013
+	easydom.js foi modificado
+
+Revisado em 14/06/2013
+
+Revisado em 28/05/2013
+	a class MySQLPersistence agora é um singleton
+		tem um atributo estatético chamado $instance
+		tem um construtor privado
+		o método public getConnection() foi substituído pelo
+		privado connect()
+	removi o método getConnection() em DBConnection
+	removi o método getConnection() de Model
+	acrescentei método attrs()em Model
+	connection agora é atributo estático em DefaultModel
+	correção do método init em DefaultController
+		depende do arquivo project.php em ../app
+
+Revisado em 21/05/2013
