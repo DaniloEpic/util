@@ -15,7 +15,7 @@ public static $model;
   self::$model = $m;
   }
   else {
-  return $m;
+  return $model;
   }
  }
  
@@ -26,7 +26,10 @@ public static $model;
  $rm->invoke(self::$model,$y);
  }
  
- public static function get($x) { $m = self::$model->get_method($x); return $m->invoke(self::$model); }
+ public static function get($x) {
+ $m = self::$model->get_method($x);
+ return $m->invoke(self::$model);
+ }
  
  public static function from_array($v,$o = false) {
  $dm = self::defaultModel();
@@ -70,6 +73,7 @@ public static $model;
  
  public static function fields() {
  return self::$model->getFields();
- }
+ }
+
 }
 ?>
