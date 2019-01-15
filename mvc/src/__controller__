@@ -15,7 +15,7 @@ public static $model;
   self::$model = $m;
   }
   else {
-  return $model;
+  return self::$model;
   }
  }
  
