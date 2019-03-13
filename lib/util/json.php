@@ -91,7 +91,7 @@ return $b;
 
 class JSON_Attribute {
 private $name;
-private $str;
+private $value;
  
  public function JSON_Attribute($name) {
  $this->name = $name;
@@ -99,16 +99,16 @@ private $str;
  }
  
  public function true_value() {
- $this->str =  "\"".$this->name."\":true";
+ $this->value = "true";
  }
  
  public function false_value() {	 
- $this->str = "\"".$this->name."\":false";
+ $this->value = "false";
  }
  
  //
  public function nil() {
- $this->str = "\"".$this->name."\":null";
+ $this->value = "null";
  }
  
  public function set_value($m) {
@@ -116,11 +116,17 @@ private $str;
   if (strpos($n,"{") == 1) {
   $n = $m;
   }
- $this->str = "\"".$this->name."\":".$n;
+ $this->value = $n;
+ }
+ 
+ public function get_value() {
+ return $this->value;
  }
  
  public function to_s() { 
- return $this->str;
+ $s = "\"".$this->name."\":";
+ $s .= $this->value;
+ return $s;
  }
 }
 

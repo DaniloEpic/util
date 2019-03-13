@@ -58,4 +58,14 @@ $o = false;
  }
 return $o;
 }
+
+function email_valido($email) {
+$pass = (filter_var($email,FILTER_VALIDATE_EMAIL));
+return $pass;
+}
+
+function strings_iguais($a,$b) {
+$pass = (strcmp($a,$b) == 0);
+return $pass;
+}
 ?>

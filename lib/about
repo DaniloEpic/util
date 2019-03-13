@@ -1,3 +1,10 @@
+2019-Mar-10
+	criado o arquivo Controller.php
+	o arquivo /util/strings.php ganhou novas funções
+
+2019-Mar-04
+	/util/json.php --> melhorias em JSON_Attribute()
+
 2018-Dez-03
 	/calendario/calendario.php foi corrigido
 
