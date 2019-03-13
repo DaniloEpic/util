@@ -1,53 +1,17 @@
 <?php
-require_once PROJECT_ADDRESS."/lib/DefaultController.php";
+require_once PROJECT_ADDRESS."/lib/Controller.php";
+require_once PROJECT_ADDRESS."/lib/classes/Register.php";
 require PROJECT_ADDRESS."/app/models/@model.php";
 
-abstract class @modelController extends DefaultController {
+abstract class @modelController extends Controller {
 public static $model;
+public static $classe;
+public static $exception;
 
  public static function init() {
- parent::init();
  self::$model = new @model();
- }
- 
- public static function defaultModel($m = null) {
-  if ($m != null) {
-  self::$model = $m;
-  }
-  else {
-  return self::$model;
-  }
- }
- 
- public static function set($x,$y) {
- $rc = self::$model->getClasse();
- $n = "set".ucfirst(strtolower($x));
- $rm = $rc->getMethod($n);
- $rm->invoke(self::$model,$y);
- }
- 
- public static function get($x) {
- $m = self::$model->get_method($x);
- return $m->invoke(self::$model);
- }
- 
- public static function from_array($v,$o = false) {
- $dm = self::defaultModel();
-  if ($o) {
-  $p = $dm->getClasse()->newInstance();
-  }
- $b = explode(",",$dm->getFields());
-  for ($i = 0; $i < count($b); $i++) {
-  $rm = $dm->getClasse()->getMethod("set".ucfirst(strtolower($b[$i])));
-  $n = $v["".$b[$i].""];
-   if ($p) {
-   $rm->invoke($p,$n);
-   }
-   else {
-   $rm->invoke($dm,$n);
-   }
-  }
- return $p;
+ self::$classe = new ReflectionClass(__CLASS__);
+ self::$exception = new Register();
  }
  
  public static function get@model($i) {
@@ -73,7 +37,6 @@ public static $model;
  
  public static function fields() {
  return self::$model->getFields();
- }
-
+ }
 }
 ?>
