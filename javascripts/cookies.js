@@ -11,7 +11,7 @@ this.value = v;
  };
  
  this.registrar = function () {
- s = this.name+"="+encodeURIComponent(this.value);
+ var s = this.name+"="+encodeURIComponent(this.value);
   if (this.domain) {
   s += "; domain="+this.domain;
   }
@@ -22,7 +22,7 @@ this.value = v;
  };
  
  this.remover = function () {
- dt = new Date();
+ var dt = new Date();
  dt.setTime(dt.getTime() - 180000);
  var str = ""+this.name+"=00000; path="+this.path+"; expires="+dt.toGMTString();
  document.cookie = str;
@@ -54,9 +54,9 @@ this.path = p;
   if (document.cookie.length > 0) {
   var c = document.cookie.split(";");
    for (i = 0; i < c.length; i++) {
-   d = c[i].split("=");
+   var d = c[i].split("=");
     if (d.length == 2) {
-    b = new Biscoito(d[0].trim(),d[1].trim());
+    var b = new Biscoito(d[0].trim(),d[1].trim());
     b.setPath(this.path);
     this.lista.set(b,"name");
     }

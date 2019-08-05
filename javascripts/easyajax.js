@@ -191,6 +191,9 @@ this.response;
  this.isOk = function () {
  return (this.response.status == 200);
  };
+ this.codigo = function () {
+ return this.response.status;
+ };
 }
 
 /*

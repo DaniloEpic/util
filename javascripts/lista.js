@@ -272,6 +272,14 @@ this.ultimo = null;
  
 }
 
+function e_maior(a,b,c) {
+return (a[c] > b[c]);
+}
+
+function e_menor(a,b,c) {
+return (a[c] < b[c]);
+}
+
 
 //
 

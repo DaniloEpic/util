@@ -1,3 +1,22 @@
+2019-05-12
+	correções em "cookies.js"
+	"easyajax.js" - definido o método codigo() para o tipo Resposta
+	
+2019-04-21
+	"user_interface.js" - definido o método paginas para o tipo UserInterface
+
+2019-02-02
+	"formulario.js" - criada a função onEnter
+	"user_interface.js" - o tipo 'Selecao' foi melhorado
+
+2019-01-10
+	"formulario.js" - definidos os tipos Elfo e FakeForm
+	"lista.js" - criadas as funções e_maior() e e_menor()
+	"user_interface.js" - definido o tipo Contador
+
+2018-12-21
+	"user_interface.js" - correções em UIException
+
 2018-10-13
 	"user_interface.js" - melhorias em UIContainer
 

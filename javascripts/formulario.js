@@ -214,3 +214,65 @@ this.whatIsYourProblem;
  };
  
 }
+
+function Elfo(q) {
+this.elemento = q;
+this.nome = q.name;
+ this.definirValor = function (v) {
+ this.elemento.value = v;
+ };
+ this.obterValor = function () {
+ return this.elemento.value;
+ };
+ this.queryString = function () { 
+ var v = this.obterValor();
+ var s = "";
+  if (v.length > 0) {
+  s += this.nome+"="+v;
+  }
+ return s;
+ };
+}
+
+function FakeForm() {
+this.elementos = new SequentialLinkedList();
+ this.addElement = function (m) {
+ var n = new Elfo(m);
+ this.elementos.set(n,"nome");
+ };
+ this.getElement = function (m) {
+ var e = this.elementos.get("nome",m).elemento;
+ return e;
+ };
+ this.valueFor = function (m,n) {
+ var e = this.getElement(m);
+ e.definirValor(n);
+ };
+ this.data = function () {
+ var i;
+ var n = this.elementos.primeiro;
+ var s = "";
+  for (i = 0; i < this.elementos.tamanho; i++) {
+  var q = n.elemento.queryString();
+   if (q.length > 0) {
+    if (s.length > 0) {
+    s += "&";
+    }
+   s += q;
+   }
+  n = n.sucessor;
+  }
+ return s;
+ };
+}
+
+function onEnter(e) {
+var a = e.getAttribute('onEnter');
+ if (a) { 
+ e.onkeydown = function (x) { 
+  if (x.keyCode == 13) {
+  eval(a);
+  }
+ };
+ }
+}
