@@ -4,6 +4,7 @@ class Model:
  
  def __init__(self,name):
   self.name = name
+  self.created = False
  #
  
  def set_attributes(self,a,b=None):
@@ -18,6 +19,10 @@ class Model:
   for a in self.attributes:
    s += "private $"+a+";\n"
   return s
+ #
+ 
+ def get_file(self):
+  return self.project+"/app/models/"+self.name+".php"
  #
  
  def accessor_methods(self):
@@ -53,10 +58,11 @@ class Model:
  def create(self):
   "cria o modelo solicitado"
   os.mkdir(self.project+"/"+self.name.lower())
-  a = self.project+"/app/models/"+self.name+".php"
+  a = self.get_file()
   b = open(a,encoding="utf_8",mode="w")
   b.write(self.toS())
   b.close()
+  self.created = True
  #
  
 #

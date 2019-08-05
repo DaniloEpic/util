@@ -1,34 +1,14 @@
 <?php
 require_once PROJECT_ADDRESS."/lib/DefaultModel.php";
-require_once PROJECT_ADDRESS."/lib/Model.php";
 require_once PROJECT_ADDRESS."/app/persistence.php";
 
 class @name extends DefaultModel implements Model {
+public static $classe;
 @attributes
  public function @name() {
- parent::init();
+ $this->setTable(__CLASS__);
+ static::$classe = new ReflectionClass(__CLASS__);
  $this->setConnection(set_db_connection());
- }
- 
- public static function fromArray($v,$attrs = null) {
- $c = new ReflectionClass(__CLASS__);
- $o = $c->newInstance();
-  if ($attrs == null) {
-  $attrs = $o->attrs();
-  }
- $a = explode(",",$attrs);
-  for ($i = 0;$i < count($a); $i++) {
-  $m = $c->getMethod("set".ucfirst(strtolower($a[$i])));
-  $p = $v["".$a[$i].""];
-  $m->invoke($o,$p);
-  }
- return $o;
- }
- 
- public static function fromJSON($j,$attrs) {
- $v = json_decode($j,true);
- $o = @name::fromArray($v,$attrs);
- return $o;
  }
 @accessor_methods
  public function persistir() {
