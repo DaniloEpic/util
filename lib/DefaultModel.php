@@ -6,21 +6,50 @@ protected static $connection;
 protected $xml_model;
 protected $table;
 protected $fields;
-protected $classe;
 protected $id;
 
- public function init() {
- $this->table = get_class($this);
- $this->classe = new ReflectionClass(get_class($this));
- /*
- $h = new Handler(PROJECT_ADDRESS."/app/models/handlers/".get_class($this).".txt");
- $h->load();
- $h->registrar($_SERVER["DOCUMENT_ROOT"].$_SERVER["PHP_SELF"]);
- */
+ public static function fromArray($m,$n=null,$o=false) {
+ $p = static::$classe->newInstance();
+  if ($n == null) {
+  $n = $p->attrs();
+  }
+ $a = explode(",",$n);
+  for ($i=0; $i < count($a); $i++) {
+  $x = $p->set_method($a[$i]);
+  $y = "";
+   if ($o) {
+   $y .= strtolower(static::$classe->getName()).".";
+   }
+  $z = $y.$a[$i];
+  $v = $m[$z];
+  $x->invoke($p,$v);
+  }
+ return $p;
+ }
+ 
+ public static function fromJSON($j,$a) {
+ $v = json_decode($j,true);
+ $o = self::fromArray($v,$a);
+ return $o;
+ }
+ 
+ public static function fromCSV($a) {
+ $f = fopen($a,"r");
+ $m = fgets($f);
+ $n = trim($m);
+ $o = explode("\t",$n);
+  while ( ($row = fgets($f)) !== false ) {
+  $d = static::$classe->newInstance();
+  $r = trim($row);
+  $p = explode("\t",$r);
+  $d->from_array($p,$o);
+  do_something($d);
+  }
+ fclose($f);
  }
  
  public function getClasse() {
- return $this->classe;
+ return static::$classe;
  }
 
  public function setId($id) {
@@ -64,8 +93,20 @@ protected $id;
  }
  
  public function get_method($s) {
- $m = $this->classe->getMethod("get".ucfirst($s));
+ $m = static::$classe->getMethod("get".ucfirst($s));
  return $m;
+ }
+ 
+ public function set_method($n) {
+ $m = static::$classe->getMethod("set".ucfirst(strtolower($n)));
+ return $m;
+ }
+ 
+ public function from_array($r,$a) {
+  for ($i=0; $i < count($a); $i++) {
+  $m = $this->set_method($a[$i]);
+  $m->invoke($this,$r[$i]);
+  }
  }
  
  public function escape($att) {
@@ -149,6 +190,24 @@ protected $id;
  public function get_lista($o) {
  return $this->getConnection()->toLista($o);
  }
+
+}
+
+interface Model {
+
+ public function persistir();
+
+ public function registro($i);
+
+ public function registros();
+
+ public function delete();
+
+ public function xml();
+
+ public function json();
+
+ public function attrs();
 
 }
 ?>

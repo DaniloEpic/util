@@ -1,3 +1,13 @@
+2019-08-05
+	correções em DefaultModel.php
+
+2019-03-23
+	criado o método estático fromCSV em DefaultModel.php
+
+2019-03-18
+	arquivo Model.php foi removido
+	DefaultModel.php foi melhorado
+
 2019-Mar-10
 	criado o arquivo Controller.php
 	o arquivo /util/strings.php ganhou novas funções
